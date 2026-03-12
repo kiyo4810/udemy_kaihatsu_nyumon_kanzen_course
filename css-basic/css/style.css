@@ -1,0 +1,47 @@
+body {
+  background-image: url(../../images/dog.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  /* padding: 10px; */
+}
+h1,
+h2,
+h3,
+h4,
+p,
+div {
+  padding: 10px;
+  border: 8px ridge rgb(211 220 50 / 0.9);
+}
+
+h1 {
+  color: #4b0d27;
+  background-color: beige;
+  margin: 10px 5% 50px 5%;
+  text-align: center;
+  width: 90%;
+  height: 240px;
+}
+h2 {
+  color: darkgreen;
+  background-image: url(../../images/momo.jpg);
+  background-size: auto 100%;
+  margin: 5px 5% 0px 5%;
+}
+h3 {
+  background-image: url(../../images/akipassport.png);
+  background-size: auto 100%;
+  margin: 0px 5% 5px 5%;
+}
+h4 {
+  color: crimson;
+}
+
+p {
+  color: cyan;
+}
+
+div {
+  background-color: chocolate;
+  margin: 5px;
+}

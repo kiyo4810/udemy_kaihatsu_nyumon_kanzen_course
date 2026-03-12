@@ -146,16 +146,16 @@
     </table>
     <h2>お問い合わせフォーム</h2>
     <form action="#" method="post">
-      <input type="text" name="username" placeholder="ユーザーネーム" id="" />
+      <!-- <input type="text" name="username" placeholder="ユーザーネーム" id="" />
       <input type="password" name="password" id="" />
-      <input type="submit" value="ログイン" />
-      <dt>お名前</dt>
-      <dd><input type="text" name="username" id="" /></dd>
-      <dt>メールアドレス</dt>
-      <dd><input type="email" name="email" id="" /></dd>
-      <dt>お住いの地域</dt>
+      <input type="submit" value="ログイン" /> -->
+      <dt><label for="username">お名前</label></dt>
+      <dd><input type="text" name="username" id="username" placeholder="山田花子" required maxlength="5" /></dd>
+      <dt><label for="email">メールアドレス</label></dt>
+      <dd><input type="email" name="email" id="email" placeholder="aaaa@aaa.com" required /></dd>
+      <dt><label for="area">お住いの地域</label></dt>
       <dd>
-        <select name="area" id="">
+        <select name="area" id="area">
           <option value="" selected>選択してください</option>
           <option value="hokkaido">北海道</option>
           <option value="tohoku">東北</option>
@@ -167,6 +167,50 @@
           <option value="okinawa">沖縄</option>
         </select>
       </dd>
+      <dt>性別</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male" id="" checked/>男性 </label>
+        <label><input type="radio" name="gender" value="female" id="" />女性</label></dd>
+      <dt><label for="question">お問い合わせの内容</label></dt>
+      <dd><textarea name="contents" id="question"></textarea></dd>
+      <dt><label for="p_policy">プライバシーポリシーに同意する</label></dt>
+      <dd><input type="checkbox" name="privacy" id="p_policy" checked></dd>
+      <input type="submit" value="送信">
+    </form>
+
+        <h2>お問い合わせフォーム２</h2>
+    <form action="#" method="post">
+      <!-- <input type="text" name="username" placeholder="ユーザーネーム" id="" />
+      <input type="password" name="password" id="" />
+      <input type="submit" value="ログイン" /> -->
+      <dt><label for="username">お名前</label></dt>
+      <dd><input type="text" name="username" id="username2" placeholder="山田花子" required maxlength="5" /></dd>
+      <dt><label for="email">メールアドレス</label></dt>
+      <dd><input type="email" name="email" id="email2" placeholder="aaaa@aaa.com" required /></dd>
+      <dt><label for="income">収入</label></dt>
+      <dd>
+        <select name="income" id="income">
+          <option value="" selected>選択してください</option>
+          <option value="hokkaido">北海道</option>
+          <option value="tohoku">東北</option>
+          <option value="kanto">関東</option>
+          <option value="chubu">中部</option>
+          <option value="kinki">近畿</option>
+          <option value="shikoku">四国</option>
+          <option value="kyushu">九州</option>
+          <option value="okinawa">沖縄</option>
+        </select>
+      </dd>
+      <dt>性別</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male" id="" />男性 </label>
+        <label><input type="radio" name="gender" value="female" id="" />女性</label></label>
+        <label><input type="radio" name="gender" value="no_gender" id="" checked />答えたくない</label></dd>
+      <dt><label for="question">お問い合わせの内容</label></dt>
+      <dd><textarea name="contents" id="question2"></textarea></dd>
+      <dt><label for="p_policy">プライバシーポリシーに同意する</label></dt>
+      <dd><input type="checkbox" name="privacy" id="p_policy2" checked></dd>
+      <input type="submit" value="送信">
     </form>
   </body>
 </html>
