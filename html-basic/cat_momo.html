@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三毛猫モモの紹介ページ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>三毛猫モモの紹介ページ</h1>
+      <p>三毛猫モモについて紹介します</p>
+    </header>
+    <main>
+      <article>
+        <h2>プロフィール</h2>
+        <img src="./momo.jpg" alt="" />
+        <dl>
+          <dt>生年月日</dt>
+          <dd>2020年1月1日</dd>
+          <dt>性別</dt>
+          <dd>メス</dd>
+          <dt>出身地</dt>
+          <dd>東京都</dd>
+        </dl>
+      </article>
+      <article>
+        <h2>好きな食べ物</h2>
+        <ol>
+          <li>焼き魚</li>
+          <li>刺し身</li>
+          <li>鰹節</li>
+        </ol>
+      </article>
+    </main>
+    <aside>
+      <h2>SNS</h2>
+      <a href="http://x.com">Twitterでフォローしてください</a>
+    </aside>
+    <footer>
+      <p><small>&copy; 2026 Momo</small></p>
+    </footer>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="3">a colspan3パターン</th>
+          <!-- <th>b</th>
+          <th>c</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>td1</td>
+          <td>td2</td>
+          <td>td3</td>
+        </tr>
+        <tr>
+          <td>td4</td>
+          <td>td5</td>
+          <td>td6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>fa</td>
+          <td>fb</td>
+          <td>fc</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="4">a colspan4パターン</th>
+          <!-- <th>b</th>
+          <th>c</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>td1</td>
+          <td>td2</td>
+          <td>td3</td>
+          <td>td3</td>
+        </tr>
+        <tr>
+          <td>td4</td>
+          <td>td5</td>
+          <td>td6</td>
+          <td>td6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>fa</td>
+          <td>fb</td>
+          <td>fc</td>
+          <td>fc</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table border="1">
+      <caption>
+        <h1>テーブルの演習</h1>
+      </caption>
+      <thead>
+        <tr>
+          <th rowspan="2">名前</th>
+          <th rowspan="2">画像</th>
+          <th rowspan="2">特徴</th>
+          <th colspan="2">価格</th>
+          <!-- <th>特徴</th> -->
+        </tr>
+        <tr>
+          <!-- <th>名前</th> -->
+          <!-- <th>画像</th> -->
+          <!-- <th>特徴</th> -->
+          <th>小</th>
+          <th>大</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%B3%E3%82%B4">りんご</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/apple.jpg" alt="" /></td>
+          <td>b</td>
+          <td>b</td>
+          <td>b</td>
+        </tr>
+        <tr>
+          <td><a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8">オレンジ</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/orange.jpg" alt="" /></td>
+          <td>d</td>
+          <td>d</td>
+          <td>d</td>
+        </tr>
+        <tr>
+          <td><a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%89%E3%82%A6">ぶどう</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/grape.jpg" alt="" srcset="" /></td>
+          <td>f</td>
+          <td>f</td>
+          <td>f</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>お問い合わせフォーム</h2>
+    <form action="#" method="post">
+      <input type="text" name="username" placeholder="ユーザーネーム" id="" />
+      <input type="password" name="password" id="" />
+      <input type="submit" value="ログイン" />
+      <dt>お名前</dt>
+      <dd><input type="text" name="username" id="" /></dd>
+      <dt>メールアドレス</dt>
+      <dd><input type="email" name="email" id="" /></dd>
+      <dt>お住いの地域</dt>
+      <dd>
+        <select name="area" id="">
+          <option value="" selected>選択してください</option>
+          <option value="hokkaido">北海道</option>
+          <option value="tohoku">東北</option>
+          <option value="kanto">関東</option>
+          <option value="chubu">中部</option>
+          <option value="kinki">近畿</option>
+          <option value="shikoku">四国</option>
+          <option value="kyushu">九州</option>
+          <option value="okinawa">沖縄</option>
+        </select>
+      </dd>
+    </form>
+  </body>
+</html>

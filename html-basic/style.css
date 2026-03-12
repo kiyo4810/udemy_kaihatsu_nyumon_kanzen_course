@@ -1,0 +1,10 @@
+table {
+  border: 1px solid black;
+  margin: 3px;
+}
+
+thead {
+  background-color: aqua;
+  padding: 3px;
+  margin: 5px;
+}
