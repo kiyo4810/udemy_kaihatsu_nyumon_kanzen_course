@@ -1,0 +1,21 @@
+/* 子孫セレクタ　子以下の孫も孫の孫、、、全てに適用 */
+p span {
+  color: red;
+}
+/* 子セレクタ 子だけ。一つ下だけ */
+p > span {
+  color: blue;
+}
+/* Aの直後に記述した同階層のB要素いっこだけ */
+h2 + p {
+  color: green;
+  /* font-weight: bold; */
+}
+/* p+ul{
+  color: green;
+} */
+
+/* Aのあとに記述したすべての同階層のB要素 */
+h2 ~ p {
+  color: purple;
+} 

@@ -1,3 +1,7 @@
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+}
 h1 {
   text-align: center;
   color: rgb(40, 40, 121);
@@ -19,4 +23,14 @@ h1 {
 
 p {
   text-align: center;
+}
+
+#hello {
+  color: limegreen;
+}
+.completed {
+  text-decoration: line-through;
+}
+.completed.red {
+  color: red;
 }

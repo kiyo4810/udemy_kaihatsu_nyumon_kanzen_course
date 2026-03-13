@@ -1,0 +1,114 @@
+:root {
+  /* パレットの色を変数として定義 */
+  --accent-pink: #f2668b;
+  --dark-blue: #025e73;
+  --deep-black: #011f26;
+  --muted-teal: #026873;
+  --soft-green: #03a688;
+}
+
+body {
+  background-image: url(../../images/hogoneko_cafe.png);
+  background-size: min(100%, 600px) auto;
+  background-position: center top;
+  background-repeat: no-repeat repeat;
+
+  /* 背景画像をパレットの最も深い色とブレンドして落ち着かせる */
+  background-color: rgba(216, 227, 229, 0.8); /* --deep-blackをベースに透過 */
+  background-blend-mode: lighten; /*lightenからoverlayに変更すると画像が沈んで文字が見やすくなります*/
+
+  /* 基本のテキスト色をパレットの深い青系に */
+  color: var(--deep-black);
+  /* marginはuser agentのデフォルトに一旦任せるのでコメントアウト */
+  /* margin: 5%; */
+  min-height: 100vh;
+}
+
+/* メインの見出しにアクセントのピンクを */
+h1 {
+  color: var(--accent-pink);
+  border-bottom: 2px solid var(--soft-green);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* 小見出しに落ち着いたティールを */
+h2 {
+  color: var(--dark-blue);
+  border-left: 5px solid var(--accent-pink);
+  padding-left: 10px;
+}
+
+/* 強調したい文字 */
+strong {
+  color: var(--soft-green);
+}
+
+/* リンクの色 */
+a {
+  color: var(--muted-teal);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-pink);
+}
+p {
+  /* font-size: 60px; */
+  /* em 親要素の何倍か*/
+  font-size: 1em;
+  /* rem html root指定の何倍か */
+  font-size: 0.95rem;
+  /* % 親要素の何%か*/
+  /* font-size: 150%; */
+  /* font-weight:bold; */
+}
+h1.lesson {
+  color: olive;
+}
+p span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+ul {
+  /* list-style-type: square; */
+  /* list-style-type: circle; */
+  /* list-style-type: space-counter; */
+  list-style-type: none;
+  /* list-style-type: "\1F44D"; */
+  list-style-image: url(../../images/icon-32.png);
+}
+
+/* li::marker {
+    /* list-style: none;  */
+/* ulもしくはliでデフォルトのマーカーを消す * /
+
+  content: '🔥 '; 
+  /* 使いたい絵文字を指定 * /
+  font-size: 1.2em; 
+  /* サイズの調整 * /
+
+  font-family: 'Material Symbols Outlined';
+  content: 'check_circle';
+   /* アイコン名を指定 * /
+  font-size: 1rem;
+  color: #011f26;
+  color: var(--accent-pink);
+
+
+}  */
+
+.slideColor {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(90deg, red, red 50%, black 50%, black);
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  transition: background-position 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* easeOutQuartのイージング */
+}
+.slideColor:hover {
+  background-position: 0 0;
+}
