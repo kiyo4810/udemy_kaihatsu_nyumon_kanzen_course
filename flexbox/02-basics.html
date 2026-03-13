@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox入門</title>
+    <style>
+      .container {
+        display: flex;
+
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* flex-wrap: wrap; */
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap-reverse; */
+
+        /* flex-flow プロパティはflex-directionとflex-wrapを一度に実装 */
+        flex-flow: row wrap;
+        /* flex-flow: row nowrap  ;  */
+        /* flex-flow: column wrap  ;  */
+        /* flex-flow: column nowrap  ;  */
+
+        /* justify-contentは横方向↔️↔️↔️↔️ */
+        /* justify-content: center; */
+        justify-content: flex-start;
+        /* justify-content: flex-end; */
+        /* space-betweenは両端は端っこに。最後の列も端っこに */
+        /* justify-content: space-between; */
+        /* space-aroundは両端がアイテムの半分の幅に。残りは均等に */
+        /* justify-content: space-around; */
+        /* space-evenlyは両端がアイテムと等しい幅に。残りは均等に */
+        /* justify-content: space-evenly; */
+
+        /* align-contentは縦方向↕️↕️↕️↕️ */
+        /* align-content: stretch; */
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        align-content: space-between;
+        align-content: space-around;
+
+        /* 100vhで画面の高さいっぱいいっぱい使う */
+        /* height: 100vh; */
+        /* height: 50vh; */
+        /* height: 200vh; */
+
+        /* align-items: stretch;  */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* 文字列のベースラインで揃える */
+        /* align-items: baseline; */
+      }
+      .item {
+        /* background-color: #ffa61c;
+      margin: 10px;
+      padding: 20px; */
+        background-color: coral;
+        margin: 1rem;
+        padding: 2rem;
+      }
+      .lg {
+        /* font-size: xxx-large; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item01</div>
+      <!-- <div class="item lg">item02</div> -->
+      <div class="item">item02</div>
+      <div class="item">item03</div>
+      <div class="item">item04</div>
+      <div class="item">item05</div>
+      <div class="item">item06</div>
+      <div class="item">item07</div>
+      <div class="item">item08</div>
+      <div class="item">item09</div>
+      <div class="item">item10</div>
+      <div class="item">item11</div>
+      <div class="item">item12</div>
+      <div class="item">item13</div>
+      <div class="item">item14</div>
+      <div class="item">item15</div>
+      <div class="item">item16</div>
+      <div class="item">item17</div>
+      <div class="item">item18</div>
+    </div>
+  </body>
+</html>
