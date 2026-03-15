@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* common */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #555;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/*
+background-image: url(https://dummyimage.com/3000x2500/ccc/fff);
+*/
+
+/* header */
+
+header {
+  border-top: 8px solid #8c6239;
+}
+
+.header_logo {
+  width: 90px;
+}
+
+.header_content {
+  display: flex;
+  /* flex-direction: row; が display: flex; を指定した時の「初期値（デフォルト）」だから */
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #555;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active,
+header nav ul li.current a {
+  color: #8c6239;
+}
+
+#main_image {
+  width: 100%;
+  height: 50vh;
+  background-image: url(https://dummyimage.com/3000x2500/454045/acaec4.png);
+  background-repeat: no-repeat;
+}
