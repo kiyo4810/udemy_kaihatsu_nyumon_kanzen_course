@@ -161,15 +161,54 @@ footer small {
   html {
     font-size: 87.5%;
   }
+  /* 1. 外枠の制限をなくす */
+  .wrapper {
+    max-width: 100%; /* 940pxの制限を解除 */
+    width: 100%; /* 常に100%にする */
+    padding: 0; /* 左右の10pxの余白も不要なら0にする */
+  }
   .header_logo {
     width: 60px;
+    /* 上下中央に寄りすぎないよう調整 */
+    margin-bottom: 10px;
+  }
+  /* ヘッダーのコンテンツを縦並びに（メニューが多い場合） */
+  .header_content {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* ナビゲーションの横幅を調整 */
+  header nav ul li {
+    margin: 0 10px; /* 左側だけ30pxだと右に寄ってしまうので均等に */
+  }
+  /* メイン画像の高さをスマホ向けに調整 */
+  #main_image {
+    height: 30vh; /* 50vhはスマホだと長すぎるので30vhくらいが綺麗 */
   }
   .contents {
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 20px;
   }
+  /* 2. メインコンテンツとサイドバーも100%に */
   #main_content,
   #sidebar {
     width: 100%;
+    padding: 0 15px; /* 枠は100%でも、文字が端に当たりすぎないよう少し内側に余白 */
+    box-sizing: border-box; /* paddingを含めて100%にするため */
+  }
+  /* 3. 画像も隙間なく広げる */
+  img,
+  #main_image {
+    width: 100%;
+  }
+  /* お知らせ(info)のdt/ddの幅をリセット（スマホだと7emは狭すぎる場合がある） */
+  #info dt {
+    width: 100%; /* 日付を上に */
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  #info dd {
+    width: 100%; /* 内容を下に */
+    margin-bottom: 15px;
   }
 }
