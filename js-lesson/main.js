@@ -115,6 +115,150 @@ for (let index = 1; index <= 100; index++) {
 }
 console.log(sum);
 
+let arrayColor = ['Red', 'Green', 'Blue'];
+
+console.log(arrayColor[0]);
+console.log(arrayColor[1]);
+console.log(arrayColor[2]);
+
+for (let index = 0; index < arrayColor.length; index++) {
+  console.log(arrayColor[index]);
+}
+
+const user = {
+  name: 'Olivia',
+  gender: 'woman',
+  birth: '1990/1/1',
+};
+console.log(user);
+console.log(user.name);
+console.log(user.gender);
+console.log(new Date(user.birth));
+///////////////
+const scores = [100, 90, 80, 70, 60];
+let sums = 0;
+
+for (let index = 0; index < scores.length; index++) {
+  sums += scores[index];
+}
+console.log(sums);
+console.log(sums / scores.length);
+/////////////
+
+// function getTriArea (wid,hei) {
+//   let area = wid*hei/2;
+//   console.log(area);
+
+//////無名関数、関数リテラル。関数は無名。変数に入ってるだけ
+// const getTriArea = function (wid,hei) {
+//   return wid*hei/2;
+// }
+// console.log(getTriArea(4,8));
+
+// };
+// getTriArea(50,10);
+
+//// アロー関数 1
+// const getTriArea = (wid,hei)=>{
+//   let area = wid*hei/2;
+// console.log(area);
+// }
+// getTriArea(5,4);
+
+//// アロー関数 2
+const getTriArea = (wid, hei) => {
+  return (wid * hei) / 2;
+};
+console.log(getTriArea(5, 4));
+
+// const getTriArea = (wid,hei)=> wid*hei/2;
+// console.log(getTriArea(5,4));
+
+// const getTriArea = (wid, hei) => {
+//   return (wid * hei) / 2;
+//   // console.log(area);
+// };
+// let area = getTriArea(50, 4);
+// console.log(area);
+
+//// functionコンストラクターを使う。実務ではあまり使わない
+// const getTriArea = new Function('wid','hei','return wid*hei/2');
+// console.log(getTriArea(3,5));
+
+// const sumApple = (aPrice, aNum) => aPrice*aNum;
+// console.log(sumApple(100,13));
+
+function price(unitPrice, n) {
+  return unitPrice * n;
+}
+console.log(price(100, 13));
+
+/////////////////////////////////////////////
+// DOM操作
+/////////////////////////////////////////////
+//////////IDをキーに取得
+// const elem = document.getElementById('button');
+// elem.addEventListener('click', () => {
+// const result = document.getElementById('result');
+// console.log(result.innerText);
+// // 第三引数の「,{ once: true }」を入れると一回だけ実行。現代的書き方。省略が普通
+// },{ once: true })
+
+//////////TagNameをキーに取得
+// const elem = document.getElementById('button');
+// elem.addEventListener('click', () => {
+//   //////// getエレメン「ツ」だから複数を■■ 配列 ■■の形で返す
+//   const results = document.getElementsByTagName('div');
+//   console.log(results);
+//   for (let index = 0; index < results.length; index++) {
+//     const element = results[index];
+//     console.log(element.innerText);
+//   }
+//   // 第三引数の「,{ once: true }」を入れると一回だけ実行。現代的書き方。省略が普通
+// },{ once: true })
+
+// //////////nameをキーに取得
+// const elem = document.getElementById('button');
+// elem.addEventListener('click', () => {
+//   //////// getエレメン「ツ」だから複数を■■ 配列 ■■の形で返す
+//   const results = document.getElementsByName('result');
+//   console.log(results);
+//   for (let index = 0; index < results.length; index++) {
+//     const element = results[index];
+//     console.log(element.value);
+//   }
+//   // 第三引数の「,{ once: true }」を入れると一回だけ実行。現代的書き方。省略が普通
+// },{ once: true })
+
+// //////////classをキーに取得
+// const elem = document.getElementById('button');
+// elem.addEventListener('click', () => {
+//   //////// getエレメン「ツ」だから複数を■■ 配列 ■■の形で返す
+//   const results = document.getElementsByClassName('controls');
+//   console.log(results);
+//   for (let index = 0; index < results.length; index++) {
+//     const element = results[index];
+//     console.log(element.innerText);
+//   }
+//   // 第三引数の「,{ once: true }」を入れると一回だけ実行。現代的書き方。省略が普通
+// })
+
+const btn = document.getElementById('button');
+btn.addEventListener('click', (e) => {
+  // 【最重要】これがないと、ページがリロードされてしまいます！
+  e.preventDefault();
+  const textIn = document.getElementById('textInput');
+  const Ullist = document.getElementById('list');
+  const li = document.createElement('li');
+  li.innerText = textIn.value;
+  // Ullist.appendChild(li);
+  Ullist.prepend(li);
+  //おまけ。追加後入力フォームをからにする
+  textIn.value = '';
+  // 3. 【ここがポイント】透かし文字を書き換える
+  textIn.placeholder = '次、どんどん入力してね';
+});
+
 /////////////////////////////////////////////
 // fetchを使って、文字化けを回避しながら中身を読み出す
 /////////////////////////////////////////////
