@@ -14,10 +14,32 @@
 
     <main class="content">
       <h1>👧Day 80 JS基礎</h1>
-      <p>
+      <p id="result">
         ☕️実力にあったUdemy教材発見<br />
         おさらい含むJavaScriptに突入
       </p>
+      <!-- ここからボタン -->
+      <form id="message-form">
+        <input type="text" name="result" id="textInput" placeholder="何か入力してね" />
+        <button id="button" type="submit">入力内容を追加</button>
+      </form>
+      <!-- ここからボタン２ -->
+
+      <ul id="list"></ul>
+      <ul>
+        <li id="oldList">古い要素</li>
+      </ul>
+      <input id="button2" type="button" value="置き換え！" />
+      <!-- ここからボタン３ -->
+      <ul id="list3">
+        <li>要素１</li>
+        <li>要素２</li>
+        <li>要素３</li>
+        <li>要素４</li>
+        <li>要素５</li>
+      </ul>
+      <input id="button3" type="button" value="削除！" />
+
       <h2>jsのソースコードの下のほうを見てね</h2>
       <pre id="code-display" class="language-javascript"></pre>
     </main>
