@@ -49,8 +49,75 @@ if (valX >= 90) {
 } else {
   console.log('D');
 }
+let numnum = 100;
+let numstr = '100';
+if (numnum === numstr) {
+  console.log('同じ');
+} else {
+  console.log('別物');
+}
 
+// 「ここから処理を開始せよ」という「入り口（ラベル）」に過ぎない。
+// その直後にある break; という看板を見て、ようやく「あ、ここで終わりか」と判断して外に出ます。
+switch (1) {
+  case 1:
+    console.log('one');
+    break;
+
+  case 2:
+    console.log('two');
+    break;
+
+  case 3:
+    console.log('three');
+    break;
+
+  default:
+    console.log('other');
+    break;
+}
+let age = 10;
+if (age >= 12) {
+  console.log('5000円です');
+} else if (age >= 6) {
+  console.log('2500円です');
+} else {
+  console.log('1000円です');
+}
+
+const array = [9, 6, 4, 3, 1];
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  console.log(element);
+}
+
+let i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+
+do {
+  console.log(i + 'だぜ');
+  i++;
+} while (i <= 20);
+
+// let sum = 0;
+// for (let index = 0; index <100; index++) {
+//   sum = sum+index+1;
+
+// }
+// console.log(sum);
+
+let sum = 0;
+for (let index = 1; index <= 100; index++) {
+  sum = sum + index;
+}
+console.log(sum);
+
+/////////////////////////////////////////////
 // fetchを使って、文字化けを回避しながら中身を読み出す
+/////////////////////////////////////////////
 fetch('./main.js')
   .then((response) => {
     // responseをtextとして受け取る際、明示的にUTF-8を指定した形になる
