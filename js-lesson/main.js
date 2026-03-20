@@ -189,18 +189,18 @@ const btn = document.getElementById('button');
 btn.addEventListener('click', (e) => {
   // 【最重要】これがないと、ページがリロードされてしまいます！
   e.preventDefault();
-  const textIn = document.getElementById('textInput');
+  const textBox = document.getElementById('textBox');
   const Ullist = document.getElementById('list');
   const li = document.createElement('li');
 
-  if (textIn.value !== '') {
-    li.innerText = textIn.value;
+  if (textBox.value !== '') {
+    li.innerText = textBox.value;
     // Ullist.appendChild(li);
     Ullist.prepend(li);
     //おまけ。追加後入力フォームをからにする
-    textIn.value = '';
+    textBox.value = '';
     // 3. 【ここがポイント】透かし文字を書き換える
-    textIn.placeholder = '次、どんどん入力してね';
+    textBox.placeholder = '次、どんどん入力してね';
   }
 });
 
@@ -224,6 +224,12 @@ elemB2.addEventListener('click', () => {
   const removeIndex = elements.length - 1;
   parentElement.removeChild(elements[removeIndex]);
 });
+
+//イベントハンドラ
+const event1 = document.getElementById('button4');
+event1.onclick = () => {
+  console.log('clicked!!!');
+};
 
 /////////////////////////////////////////////
 // fetchを使って、文字化けを回避しながら中身を読み出す
