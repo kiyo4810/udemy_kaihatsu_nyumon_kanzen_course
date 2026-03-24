@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      //app要素を取得
+      const app = document.getElementById('app');
+      const header = document.createElement('h2');
+      const text = 'はろーーおぼっちゃまくん';
+      const headerContent = document.createTextNode(text);
+      header.appendChild(headerContent);
+      app.appendChild(header);
+    </script>
+  </body>
+</html>

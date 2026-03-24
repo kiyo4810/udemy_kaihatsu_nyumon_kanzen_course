@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" data-type="module">
+      import React from 'https://esm.sh/react@19.1.0/?dev';
+      import ReactDOMClient from 'https://esm.sh/react-dom@19.1.0/client/?dev';
+
+      // ここにReactのコードを書いていきます
+      const domNode = document.getElementById('app');
+      // 取得した要素にReactのルートを作成createRoot（司令塔の設置）
+      //ここがキモです。指定した場所に、React専用の**「管理センター（Root）」**を設置します。
+      //この管理センターができると、Reactは「どの部品をいつ更新するか」を賢く計算できるようになります。
+      //「ReactDOMClient」とは？
+      //一言でいうと、**「ブラウザ（閲覧者の環境）でReactを動かすための専用ツールセット」**の名前
+      console.log(ReactDOMClient);
+
+      const root = ReactDOMClient.createRoot(domNode);
+      // ここまで雛形↑
+      // ここから学習用
+
+      // 単一の要素
+      // const element = <h1>はろはろせかい！</h1>;
+
+      // 複数の要素
+      const element = (
+        <div>
+          <h1>ヘロヘロ世界</h1>
+          <p>mamamama</p>
+          <div
+            style={{
+              color: 'blue',
+              fontSize: '16px',
+              marginTop: '50px',
+            }}
+          >
+            スタイルされたラララ
+          </div>
+        </div>
+      );
+      root.render(element);
+    </script>
+  </body>
+</html>
