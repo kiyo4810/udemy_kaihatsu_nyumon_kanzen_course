@@ -28,25 +28,44 @@
       // ここから学習用
 
       // 単一の要素
-      // const element = <h1>はろはろせかい！</h1>;
+      const element = <h1>はろはろせかい！</h1>;
 
       // 複数の要素
-      const element = (
+      const element2 = (
         <div>
           <h1>ヘロヘロ世界</h1>
           <p>mamamama</p>
-          <div
-            style={{
-              color: 'blue',
-              fontSize: '16px',
-              marginTop: '50px',
-            }}
-          >
-            スタイルされたラララ
-          </div>
         </div>
       );
-      root.render(element);
+
+      // スタイルされた要素
+      const element3 = (
+        <div
+          style={{
+            color: 'blue',
+            fontSize: '16px',
+            marginTop: '50px',
+          }}
+        >
+          スタイルされたラララ
+        </div>
+      );
+
+      // JavaScriptも組み込み可能。三項演算子
+      const isLoggedIn = true;
+      const element4 = <div>{isLoggedIn ? <button>ログアウト</button> : <button>ログイン</button>}</div>;
+      // 単一で表示する場合
+      // root.render(element);
+
+      // 複数で表示する場合
+      root.render(
+        <>
+          {element}
+          {element2}
+          {element3}
+          {element4}
+        </>,
+      );
     </script>
   </body>
 </html>
