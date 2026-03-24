@@ -127,3 +127,11 @@ h1 {
   display: flex;
   align-items: center;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}

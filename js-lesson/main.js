@@ -225,11 +225,21 @@ elemB2.addEventListener('click', () => {
   parentElement.removeChild(elements[removeIndex]);
 });
 
-//イベントハンドラ
+//イベントハンドラ各種
 const event1 = document.getElementById('button4');
 event1.onclick = () => {
   console.log('clicked!!!');
 };
+
+window.onload = (e) => {
+  console.log('window open!');
+  console.log(e);
+};
+
+const event2 = document.getElementById('button5');
+event2.addEventListener('click', () => {
+  console.log('これがaddEventListernerだ');
+});
 
 /////////////////////////////////////////////
 // fetchを使って、文字化けを回避しながら中身を読み出す
