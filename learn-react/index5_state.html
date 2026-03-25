@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React入門 State（index5_state.html）</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel" data-type="module">
+      import React from 'https://esm.sh/react@19.1.0/?dev';
+      import ReactDOMClient from 'https://esm.sh/react-dom@19.1.0/client/?dev';
+      // console.log(React.version);
+      const domNode = document.getElementById('app');
+      const root = ReactDOMClient.createRoot(domNode);
+
+      function LikeButton() {
+        // likesという状態を初期値0で用意します、という意味
+        // likesは現在のいいね数という状態。それが準備される
+        // setLikesはその状態を変更するために使う関数が準備される
+        const [likes, setLikes] = React.useState(0);
+        console.log(likes);
+        console.log(setLikes);
+
+        function handleClick() {
+          // console.log('いいね！ボタンがクリックされました');
+          // setLikes関数を呼び出すことでReactがコンポーネントを再描画する
+          setLikes(likes + 1);
+        }
+        return (
+          <div>
+            <button onClick={handleClick}>いいね！</button>
+            <p>いいね！{likes}</p>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <LikeButton />
+          </div>
+        );
+      }
+      root.render(<App />);
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>

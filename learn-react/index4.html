@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React入門 Props（index3.html）</title>
+    <title>React入門 Props（index4.html）</title>
   </head>
   <body>
     <div id="app"></div>
@@ -22,6 +22,10 @@
         return (
           <div>
             {/* 以下 {}波括弧の中はJSのコードである*/}
+            {/*key={user.id}の記述はなくても動くが重大な警告
+            ないとデータが変化したときにエラーを起こすかも。
+            Reactがその差分以外も書き換えに行く必要が発生する
+            「一番外側の箱（親要素）」**に書かなければいけない */}
             {users.map((user) => (
               <div key={user.id}>
                 <p>名前：{user.name}</p>
