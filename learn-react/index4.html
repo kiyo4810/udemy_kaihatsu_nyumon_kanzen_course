@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React入門 Props（index3.html）</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel" data-type="module">
+      import React from 'https://esm.sh/react@19.1.0/?dev';
+      import ReactDOMClient from 'https://esm.sh/react-dom@19.1.0/client/?dev';
+      // console.log(React.version);
+      const domNode = document.getElementById('app');
+      const root = ReactDOMClient.createRoot(domNode);
+
+      // 子コンポーネント
+      // Reactでは引数はオブジェクトとして渡されるので以下の{}で囲む
+      function ShowProfileInfo({ users }) {
+        // console.log(name);
+        // console.log(age);
+        return (
+          <div>
+            {/* 以下 {}波括弧の中はJSのコードである*/}
+            {users.map((user) => (
+              <div key={user.id}>
+                <p>名前：{user.name}</p>
+                <p>年齢：{user.age}歳</p>
+                <p>{user.age >= 16 ? 'お酒が飲めます' : 'お酒が飲めません'}</p>
+                <hr />
+              </div>
+            ))}
+          </div>
+        );
+      }
+
+      // 親コンポーネント
+      function App() {
+        const users = [
+          { id: 1, name: 'ふくちゃん', age: 12 },
+          { id: 2, name: '椎名一', age: 15 },
+          { id: 3, name: '加藤優', age: 16 },
+          { id: 4, name: '山田太郎', age: 17 },
+          { id: 5, name: 'ガキ', age: 18 },
+          { id: 6, name: 'ベイベー', age: 1 },
+          { id: 7, name: '子', age: 7 },
+          { id: 8, name: 'オジ', age: 67 },
+        ];
+        return (
+          <div>
+            <h1>N人分のデータを配列＆Map関数 Ver</h1>
+            {/* 文字列は""で囲み、数字や変数は{}で囲む。{}の中はJSである！ */}
+            <ShowProfileInfo users={users} />
+          </div>
+        );
+      }
+      // コンポーネントDomにレンダリングをする処理
+      root.render(<App />);
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>
