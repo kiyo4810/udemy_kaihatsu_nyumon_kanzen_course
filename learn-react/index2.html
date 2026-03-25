@@ -22,6 +22,7 @@
             <header>
               <Title />
               <Navigation />
+              <UserName />
             </header>
           </>
         );
@@ -36,6 +37,9 @@
           </nav>
         );
       }
+      function UserName() {
+        return <span>Bull Kiyo （ぶるきよ）</span>;
+      }
       function Content() {
         return (
           <>
@@ -48,11 +52,16 @@
           <article>
             <h2>ようこそ</h2>
             <p>ここはメインコンテンツが入ります</p>
+            <UserName />
           </article>
         );
       }
       function Footer() {
-        return <small>&copy; 2026 Goma Pan Clinic</small>;
+        return (
+          <small>
+            &copy; 2026 Goma Pan Clinic | <UserName />
+          </small>
+        );
       }
       function HomePage() {
         return (
@@ -64,21 +73,6 @@
         );
       }
       root.render(<HomePage />);
-
-      // function Main(){
-      //   return <main>コンテンツの中身だよ</main>;
-      // }
-      // そのままrootを書き足したらHeaderがMainに上書きされる
-      // root.render(<Main />);
-      // 複数で表示する場合
-      // root.render(
-      //   <>
-      //     <Header />
-      //     <Main/>
-
-      //   </>,
-      // );
-      // root.render(<h2>Hello, React Dom!!</h2>);
     </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </body>
