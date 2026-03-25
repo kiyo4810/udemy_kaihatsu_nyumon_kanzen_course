@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="inputTexts"></div>
+    <script type="text/babel" data-type="module">
+      import React from 'https://esm.sh/react@19.1.0/?dev';
+      import ReactDOMClient from 'https://esm.sh/react-dom@19.1.0/client/?dev';
+      // console.log(React.version);
+      const domNode = document.getElementById('app');
+      const domNode2 = document.getElementById('inputTexts');
+
+      const root = ReactDOMClient.createRoot(domNode);
+
+      function handleChange(event) {
+        console.log('入力値：', event.target.value);
+        // 以下本当は良くないが練習として。後にuseStateを使えるようになろう
+        domNode2.innerText += event.target.value;
+      }
+
+      const element = (
+        <div>
+          <p>入力後コンソールを見てね</p>
+          <input type="text" onChange={handleChange} placeholder="入力してください" name="" id="" />
+        </div>
+      );
+
+      root.render(element);
+      // root.render(<h2>Hello, React Dom!!</h2>);
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>
